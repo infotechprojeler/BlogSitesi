@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Post>
+@{
+    ViewData["Title"] = "Tüm İçeriklerim";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tüm Gönderiler</h1>
+    <p>
+        Paylaştığım tüm içerikleri buradan inceleyebilirsiniz
+    </p>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    @foreach (var item in Model)
+    {
+        <partial name="_BlogPostView" model="item" />
+    }
+</div>

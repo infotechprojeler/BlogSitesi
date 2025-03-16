@@ -1,0 +1,14 @@
+﻿@model Post 
+
+<div class="col">
+    <div class="card shadow-sm">
+        <a href="/Posts/Details/@Model.Id">
+            <img src="/Images/@Model.Image" alt="@Model.Title" class="img-thumbnail" />
+        </a>
+        <div class="card-body">
+            <p class="card-text">
+                @Model.Title
+            </p>
+        </div>
+    </div>
+</div>
