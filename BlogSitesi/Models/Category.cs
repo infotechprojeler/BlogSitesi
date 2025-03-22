@@ -15,5 +15,6 @@ namespace BlogSitesi.Models
         public bool IsActive { get; set; }
         [Display(Name = "Eklenme Tarihi"), ScaffoldColumn(false)] // ScaffoldColumn(false) kodu admin panelinde ekranları oluştururken bu alanın ekranda oluşturulmasını engeller. Kayıt tarihi işlemini elle girişe kapatıp kayıt esnasında vermek için bu şekilde yapıyoruz.
         public DateTime? CreateDate { get; set; }
+        public List<Post>? Posts { get; set; } // 1 kategorinin 1 den fazla postu olabilir
     }
 }
